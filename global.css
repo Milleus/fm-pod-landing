@@ -1,0 +1,339 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+:root {
+  --clr-teal-300: 157 100% 85%;
+  --clr-teal-400: 157 74% 62%;
+  --clr-red-400: 0 96% 61%;
+  --clr-neutral-100: 0 0% 100%;
+  --clr-neutral-200: 225 40% 83%;
+  --clr-neutral-300: 225 21% 45%;
+  --clr-neutral-400: 225 26% 23%;
+  --clr-neutral-500: 224 35% 11%;
+
+  --ff-sans: "Chivo", sans-serif;
+
+  --fs-200: 0.75rem;
+  --fs-300: 0.875rem;
+  --fs-400: 0.9375rem;
+  --fs-800: 1.625rem;
+
+  --lh-200: 1.19;
+  --lh-300: 2;
+  --lh-400: 1.667;
+  --lh-800: 1.4615;
+
+  --fw-400: 400;
+  --fw-900: 900;
+}
+
+@media (min-width: 35em) {
+  :root {
+    --fs-400: 1.125rem;
+    --fs-800: 3rem;
+
+    --lh-400: 1.555;
+    --lh-800: 1.167;
+  }
+}
+
+@media (min-width: 45em) {
+  :root {
+    --fs-800: 3.25rem;
+
+    --lh-400: 1.555;
+    --lh-800: 1.192;
+  }
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: var(--lh-400);
+  font-family: var(--ff-sans);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-400);
+  background-color: hsl(var(--clr-neutral-500));
+  color: hsl(var(--clr-neutral-200));
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+/* Composition         */
+/* ------------------- */
+.flex {
+  display: flex;
+  gap: var(--flex-gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--grid-gap, 1rem);
+}
+
+.space-y > * + * {
+  margin-top: var(--space, 1rem);
+}
+
+/* ------------------- */
+/* Utility             */
+/* ------------------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.bg-teal-400 {
+  background-color: hsl(var(--clr-teal-400));
+}
+.bg-red-400 {
+  background-color: hsl(var(--clr-red-400));
+}
+.bg-neutral-100 {
+  background-color: hsl(var(--clr-neutral-100));
+}
+.bg-neutral-200 {
+  background-color: hsl(var(--clr-neutral-200));
+}
+.bg-neutral-300 {
+  background-color: hsl(var(--clr-neutral-300));
+}
+.bg-neutral-400 {
+  background-color: hsl(var(--clr-neutral-400));
+}
+.bg-neutral-500 {
+  background-color: hsl(var(--clr-neutral-500));
+}
+
+.text-teal-400 {
+  color: hsl(var(--clr-teal-400));
+}
+.text-red-400 {
+  color: hsl(var(--clr-red-400));
+}
+.text-neutral-100 {
+  color: hsl(var(--clr-neutral-100));
+}
+.text-neutral-200 {
+  color: hsl(var(--clr-neutral-200));
+}
+.text-neutral-300 {
+  color: hsl(var(--clr-neutral-300));
+}
+.text-neutral-400 {
+  color: hsl(var(--clr-neutral-400));
+}
+.text-neutral-500 {
+  color: hsl(var(--clr-neutral-500));
+}
+
+.fs-200 {
+  font-size: var(--fs-200);
+  line-height: var(--lh-200);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+  line-height: var(--lh-300);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+  line-height: var(--lh-400);
+}
+.fs-800 {
+  font-size: var(--fs-800);
+  line-height: var(--lh-800);
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+.fw-900 {
+  font-weight: 900;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ------------------- */
+/* Block               */
+/* ------------------- */
+.landing {
+  --grid-gap: 0;
+  justify-items: center;
+  padding: 3.875rem 1.5rem 5.875rem;
+  min-height: 100vh;
+  position: relative;
+  isolation: isolate;
+}
+
+.landing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(assets/mobile/image-host.jpg);
+  background-size: cover;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.landing .intro .description {
+  margin-top: 1rem;
+}
+
+.landing .intro .podcasts {
+  /* --flex-gap: 1r; */
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 2rem;
+}
+
+.landing .intro .podcasts li::before {
+  content: "\200B";
+  display: block;
+  height: 0;
+}
+
+.landing form {
+  --grid-gap: 1rem;
+  margin-top: 3rem;
+}
+
+/* ------------------- */
+/* Exception           */
+/* ------------------- */
+.input {
+  appearance: none;
+  border: 0;
+  font-size: var(--fs-300);
+  line-height: var(--lh-300);
+  font-weight: var(--fw-400);
+}
+
+.input[data-variant="primary"] {
+  border-radius: 1.75rem;
+  background-color: hsl(var(--clr-neutral-400));
+  padding: 0.5625rem 2rem;
+  color: hsl(var(--clr-neutral-100));
+  width: 100%;
+}
+
+.input[data-variant="primary"]::placeholder {
+  color: hsl(var(--clr-neutral-100) / 0.5);
+}
+
+.error {
+  padding-block: 0.5rem;
+}
+
+.button {
+  display: block;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  font-size: var(--fs-300);
+  line-height: var(--lh-300);
+  font-weight: var(--fw-400);
+  text-align: center;
+}
+
+.button[data-variant="primary"] {
+  border-radius: 1.75rem;
+  box-shadow: 0px 25px 20px -20px rgba(84, 230, 175, 0.497913);
+  background-color: hsl(var(--clr-teal-400));
+  padding: 0.5625rem 2rem;
+  color: hsl(var(--clr-neutral-500));
+  width: 100%;
+  transition: background-color 200ms ease-in-out;
+}
+
+.button[data-variant="primary"]:hover,
+.button[data-variant="primary"]:focus {
+  background-color: hsl(var(--clr-teal-300));
+}

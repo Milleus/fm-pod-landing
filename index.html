@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Dave Quah (@Milleus)">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <title>Frontend Mentor | Pod request access landing page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/global.css">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5W6QZZYV2W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5W6QZZYV2W');
+  </script>
+</head>
+
+<body>
+  <main class="landing grid">
+    <img class="logo" src="assets/desktop/logo.svg" alt="">
+    <div class="intro text-center">
+      <h1 class="fs-800 fw-400 text-teal-400 uppercase">
+        Publish your podcasts <span class="text-neutral-100">everywhere.</span>
+      </h1>
+      <p class="description">
+        Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify,
+        Apple Podcasts, Google Podcasts, Pocket Casts and more!
+      </p>
+      <ul class="podcasts flex">
+        <li><img src="assets/desktop/spotify.svg" alt="spotify"></li>
+        <li><img src="assets/desktop/apple-podcast.svg" alt="apple podcast"></li>
+        <li><img src="assets/desktop/google-podcasts.svg" alt="google podcasts"></li>
+        <li><img src="assets/desktop/pocket-casts.svg" alt="pocket casts"></li>
+      </ul>
+      <form id="sign-up-form">
+        <div id="email-group" class="form-group">
+          <label for="email">Email</label>
+          <input id="email-input" class="input" data-variant="primary" type="email" placeholder="Email address"
+            maxlength="255" aria-describedby="email-error" required>
+          <p id="email-error" aria-live="polite" class="error fs-200 text-red-400"></p>
+        </div>
+        <button class="button" data-variant="primary" type="submit">Request Access</button>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    const signUpForm = document.querySelector("#sign-up-form");
+    const emailInput = document.querySelector("#email-group > #email-input");
+    const emailError = document.querySelector("#email-group > #email-error");
+
+    signUpForm.noValidate = true;
+
+    signUpForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (emailInput.validity.valueMissing || emailInput.validity.typeMismatch) {
+        emailInput.setAttribute("aria-invalid", true);
+        emailError.textContent = "Oops! Please check your email";
+        emailInput.focus();
+        return;
+      };
+
+      try {
+        alert("Thanks for subscribing!");
+
+        emailInput.setAttribute("aria-invalid", false);
+        emailError.textContent = "";
+      } catch (e) {
+        alert("Oops! Something went wrong. Please try again later.");
+      }
+    });
+  </script>
+</body>
+
+</html>
