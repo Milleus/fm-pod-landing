@@ -18,7 +18,7 @@
   --fs-400: 0.9375rem;
   --fs-800: 1.625rem;
 
-  --lh-200: 1.19;
+  --lh-200: 1.1667;
   --lh-300: 2;
   --lh-400: 1.667;
   --lh-800: 1.4615;
@@ -234,16 +234,10 @@ select {
   text-transform: uppercase;
 }
 
-.text-center {
-  text-align: center;
-}
-
 /* ------------------- */
 /* Block               */
 /* ------------------- */
 .landing {
-  --grid-gap: 0;
-  justify-items: center;
   padding: 3.875rem 1.5rem 5.875rem;
   min-height: 100vh;
   position: relative;
@@ -255,32 +249,54 @@ select {
   position: absolute;
   inset: 0;
   background-image: url(assets/mobile/image-host.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.1;
   z-index: -1;
 }
 
-.landing .intro .description {
+.landing > img {
+  margin-inline: auto;
+}
+
+.landing > .intro {
+  --grid-gap: 0;
+  margin-top: 3.5rem;
+  text-align: center;
+  grid-template-areas:
+    "title"
+    "description"
+    "podcasts"
+    "form";
+}
+
+.landing > .intro h1 {
+  grid-area: title;
+}
+
+.landing > .intro .description {
+  grid-area: description;
   margin-top: 1rem;
 }
 
-.landing .intro .podcasts {
-  /* --flex-gap: 1r; */
+.landing > .intro .podcasts {
+  grid-area: podcasts;
   align-items: center;
+  justify-content: center;
   list-style: none;
   padding: 0;
   margin: 0;
   margin-top: 2rem;
 }
 
-.landing .intro .podcasts li::before {
+.landing > .intro .podcasts li::before {
   content: "\200B";
   display: block;
   height: 0;
 }
 
-.landing form {
-  --grid-gap: 1rem;
+.landing > .intro form {
+  grid-area: form;
   margin-top: 3rem;
 }
 
@@ -308,7 +324,7 @@ select {
 }
 
 .error {
-  padding-block: 0.5rem;
+  margin-block: 0.5rem;
 }
 
 .button {
@@ -327,7 +343,7 @@ select {
   border-radius: 1.75rem;
   box-shadow: 0px 25px 20px -20px rgba(84, 230, 175, 0.497913);
   background-color: hsl(var(--clr-teal-400));
-  padding: 0.5625rem 2rem;
+  padding: 0.5625rem 1.6875rem;
   color: hsl(var(--clr-neutral-500));
   width: 100%;
   transition: background-color 200ms ease-in-out;

@@ -26,9 +26,9 @@
 </head>
 
 <body>
-  <main class="landing grid">
-    <img class="logo" src="assets/desktop/logo.svg" alt="">
-    <div class="intro text-center">
+  <main class="landing">
+    <img class="logo" src="assets/desktop/logo.svg" alt="pod">
+    <div class="intro grid">
       <h1 class="fs-800 fw-400 text-teal-400 uppercase">
         Publish your podcasts <span class="text-neutral-100">everywhere.</span>
       </h1>
@@ -43,12 +43,10 @@
         <li><img src="assets/desktop/pocket-casts.svg" alt="pocket casts"></li>
       </ul>
       <form id="sign-up-form">
-        <div id="email-group" class="form-group">
-          <label for="email">Email</label>
-          <input id="email-input" class="input" data-variant="primary" type="email" placeholder="Email address"
-            maxlength="255" aria-describedby="email-error" required>
-          <p id="email-error" aria-live="polite" class="error fs-200 text-red-400"></p>
-        </div>
+        <label for="email-input" class="sr-only">Email</label>
+        <input id="email-input" class="input" data-variant="primary" type="email" placeholder="Email address"
+          maxlength="255" aria-describedby="email-error" required>
+        <p id="email-error" aria-live="polite" class="error fs-200 text-red-400"></p>
         <button class="button" data-variant="primary" type="submit">Request Access</button>
       </form>
     </div>
@@ -56,8 +54,8 @@
 
   <script>
     const signUpForm = document.querySelector("#sign-up-form");
-    const emailInput = document.querySelector("#email-group > #email-input");
-    const emailError = document.querySelector("#email-group > #email-error");
+    const emailInput = document.querySelector("#email-input");
+    const emailError = document.querySelector("#email-error");
 
     signUpForm.noValidate = true;
 
