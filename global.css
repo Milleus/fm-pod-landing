@@ -27,7 +27,7 @@
   --fw-900: 900;
 }
 
-@media (min-width: 35em) {
+@media (min-width: 45em) {
   :root {
     --fs-400: 1.125rem;
     --fs-800: 3rem;
@@ -37,7 +37,7 @@
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 60em) {
   :root {
     --fs-800: 3.25rem;
 
