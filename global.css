@@ -300,6 +300,20 @@ select {
   margin-top: 3rem;
 }
 
+@media (min-width: 45em) {
+  .landing {
+    padding: 3.125rem 5.875rem 16rem 2.5rem;
+  }
+
+  .landing::before {
+    background-image: url(assets/tablet/image-host.jpg);
+    background-position: 100% 0;
+    background-size: auto;
+    opacity: 1;
+    z-index: -1;
+  }
+}
+
 /* ------------------- */
 /* Exception           */
 /* ------------------- */
