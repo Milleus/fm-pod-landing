@@ -365,6 +365,7 @@ select {
 
   .landing > .intro form .error {
     margin-left: 2rem;
+    min-height: 0.875rem;
   }
 
   .landing > .intro .podcasts {
