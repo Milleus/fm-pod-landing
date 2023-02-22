@@ -162,28 +162,6 @@ select {
   border: 0;
 }
 
-.bg-teal-400 {
-  background-color: hsl(var(--clr-teal-400));
-}
-.bg-red-400 {
-  background-color: hsl(var(--clr-red-400));
-}
-.bg-neutral-100 {
-  background-color: hsl(var(--clr-neutral-100));
-}
-.bg-neutral-200 {
-  background-color: hsl(var(--clr-neutral-200));
-}
-.bg-neutral-300 {
-  background-color: hsl(var(--clr-neutral-300));
-}
-.bg-neutral-400 {
-  background-color: hsl(var(--clr-neutral-400));
-}
-.bg-neutral-500 {
-  background-color: hsl(var(--clr-neutral-500));
-}
-
 .text-teal-400 {
   color: hsl(var(--clr-teal-400));
 }
@@ -193,30 +171,10 @@ select {
 .text-neutral-100 {
   color: hsl(var(--clr-neutral-100));
 }
-.text-neutral-200 {
-  color: hsl(var(--clr-neutral-200));
-}
-.text-neutral-300 {
-  color: hsl(var(--clr-neutral-300));
-}
-.text-neutral-400 {
-  color: hsl(var(--clr-neutral-400));
-}
-.text-neutral-500 {
-  color: hsl(var(--clr-neutral-500));
-}
 
 .fs-200 {
   font-size: var(--fs-200);
   line-height: var(--lh-200);
-}
-.fs-300 {
-  font-size: var(--fs-300);
-  line-height: var(--lh-300);
-}
-.fs-400 {
-  font-size: var(--fs-400);
-  line-height: var(--lh-400);
 }
 .fs-800 {
   font-size: var(--fs-800);
@@ -225,9 +183,6 @@ select {
 
 .fw-400 {
   font-weight: 400;
-}
-.fw-900 {
-  font-weight: 900;
 }
 
 .uppercase {
