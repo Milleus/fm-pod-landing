@@ -18,31 +18,31 @@
   --fs-400: 0.9375rem;
   --fs-800: 1.625rem;
 
-  --lh-200: 1.1667;
-  --lh-300: 2;
-  --lh-400: 1.667;
-  --lh-800: 1.4615;
+  --lh-200: 0.8925rem;
+  --lh-300: 1.75rem;
+  --lh-400: 1.5625rem;
+  --lh-800: 2.375rem;
 
   --fw-400: 400;
   --fw-900: 900;
 }
 
-@media (min-width: 45em) {
+@media (min-width: 50em) {
   :root {
     --fs-400: 1.125rem;
     --fs-800: 3rem;
 
-    --lh-400: 1.555;
-    --lh-800: 1.167;
+    --lh-400: 1.75rem;
+    --lh-800: 3.5rem;
   }
 }
 
-@media (min-width: 60em) {
+@media (min-width: 70rem) {
   :root {
     --fs-800: 3.25rem;
 
-    --lh-400: 1.555;
-    --lh-800: 1.192;
+    --lh-400: 1.75rem;
+    --lh-800: 3.875rem;
   }
 }
 
@@ -268,6 +268,8 @@ select {
     "description"
     "podcasts"
     "form";
+  max-width: 25rem;
+  margin-inline: auto;
 }
 
 .landing > .intro h1 {
@@ -300,17 +302,16 @@ select {
   margin-top: 3rem;
 }
 
-@media (min-width: 45em) {
+@media (min-width: 50em) {
   .landing {
     padding: 3.125rem 5.875rem 16rem 2.5rem;
   }
 
   .landing::before {
     background-image: url(assets/tablet/image-host.jpg);
-    background-position: 100% 0;
+    background-position: top right;
     background-size: auto;
     opacity: 1;
-    z-index: -1;
   }
 
   .landing::after {
@@ -319,7 +320,7 @@ select {
     inset: 0;
     background-image: url(assets/desktop/bg-pattern-dots.svg);
     background-repeat: no-repeat;
-    background-position: 1.87rem 100%;
+    background-position: bottom left 1.87rem;
     z-index: -1;
   }
 
@@ -337,6 +338,8 @@ select {
     background-color: hsl(var(--clr-neutral-500));
     text-align: start;
     padding-top: 5.875rem;
+    margin-inline: unset;
+    max-width: 39.6875rem;
   }
 
   .landing > .intro .description {
@@ -347,7 +350,7 @@ select {
   .landing > .intro form {
     margin-top: 2.5rem;
     position: relative;
-    max-width: 40ch;
+    max-width: 26.75rem;
   }
 
   .landing > .intro form input {
@@ -364,14 +367,44 @@ select {
   }
 
   .landing > .intro form .error {
-    margin-left: 2rem;
-    min-height: 0.875rem;
+    padding-left: 2rem;
+    min-height: 1.875rem;
   }
 
   .landing > .intro .podcasts {
     --flex-gap: 2.5rem;
     margin-top: 3rem;
     justify-content: flex-start;
+  }
+}
+
+@media (min-width: 70rem) {
+  .landing {
+    padding: 6.375rem 10.3125rem 8.125rem;
+  }
+
+  .landing::before {
+    background-image: url(assets/desktop/image-host.jpg);
+    background-position: right top 8.125rem;
+  }
+
+  .landing::after {
+    background-image: url(assets/desktop/bg-pattern-dots.svg);
+    background-position: right top 44.875rem;
+  }
+
+  .landing > .intro {
+    margin-top: 6.4375rem;
+    padding: 5.5rem 3.625rem 0 0;
+    max-width: 45.25rem;
+  }
+
+  .landing > .intro .description {
+    margin-top: 1.5rem;
+  }
+
+  .landing > .intro .podcasts {
+    margin-top: 2.125rem;
   }
 }
 
@@ -399,7 +432,7 @@ select {
 }
 
 .error {
-  margin-block: 0.5rem;
+  padding-block: 0.5rem;
 }
 
 .button {
