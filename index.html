@@ -45,7 +45,8 @@
       <form id="sign-up-form">
         <label for="email-input" class="sr-only">Email</label>
         <input id="email-input" class="input" data-variant="primary" type="email" placeholder="Email address"
-          maxlength="255" aria-describedby="email-error" required>
+          maxlength="255" aria-describedby="email-error" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+          required>
         <p id="email-error" aria-live="polite" class="error fs-200 text-red-400"></p>
         <button class="button" data-variant="primary" type="submit">Request Access</button>
       </form>
@@ -62,7 +63,7 @@
     signUpForm.addEventListener("submit", (event) => {
       event.preventDefault();
 
-      if (emailInput.validity.valueMissing || emailInput.validity.typeMismatch) {
+      if (emailInput.validity.valueMissing || emailInput.validity.patternMismatch) {
         emailInput.setAttribute("aria-invalid", true);
         emailError.textContent = "Oops! Please check your email";
         emailInput.focus();
