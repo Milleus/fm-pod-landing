@@ -27,7 +27,7 @@
   --fw-900: 900;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 45em) {
   :root {
     --fs-400: 1.125rem;
     --fs-800: 3rem;
@@ -37,7 +37,7 @@
   }
 }
 
-@media (min-width: 70rem) {
+@media (min-width: 70em) {
   :root {
     --fs-800: 3.25rem;
 
@@ -257,7 +257,7 @@ select {
   margin-top: 3rem;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 45em) {
   .landing {
     padding: 3.125rem 5.875rem 16rem 2.5rem;
   }
@@ -333,7 +333,7 @@ select {
   }
 }
 
-@media (min-width: 70rem) {
+@media (min-width: 70em) {
   .landing {
     padding: 6.375rem 10.3125rem 8.125rem;
   }
