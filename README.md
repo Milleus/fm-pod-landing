@@ -42,7 +42,7 @@ Mobile view
 
 ### Links
 
-- Solution URL: (to update)
+- Solution URL: [https://www.frontendmentor.io/solutions/pod-request-access-landing-page-OpedKHrQz-](https://www.frontendmentor.io/solutions/pod-request-access-landing-page-OpedKHrQz-)
 - Live Site URL: [https://Milleus.github.io/fm-pod-landing/](https://Milleus.github.io/fm-pod-landing/)
 
 ## My process
