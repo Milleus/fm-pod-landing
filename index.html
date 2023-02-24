@@ -60,6 +60,13 @@
 
     signUpForm.noValidate = true;
 
+    emailInput.addEventListener("input", (event) => {
+      if (!emailInput.validity.valueMissing && !emailInput.validity.patternMismatch) {
+        emailInput.setAttribute("aria-invalid", false);
+        emailError.textContent = "";
+      }
+    });
+
     signUpForm.addEventListener("submit", (event) => {
       event.preventDefault();
 
