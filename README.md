@@ -42,7 +42,7 @@ Mobile view
 
 ### Links
 
-- Solution URL: (to update)
+- Solution URL: [https://www.frontendmentor.io/solutions/pod-request-access-landing-page-OpedKHrQz-](https://www.frontendmentor.io/solutions/pod-request-access-landing-page-OpedKHrQz-)
 - Live Site URL: [https://Milleus.github.io/fm-pod-landing/](https://Milleus.github.io/fm-pod-landing/)
 
 ## My process
@@ -58,8 +58,8 @@ Mobile view
 ### What I learned
 
 - Using Constraint Validation APIs
-- Email typeMismatch allows email addresses without a top-level domain, i.e. `x@y` is a valid email.
-- Using patternMismatch to accept only emails with top-level domain.
+- Email typeMismatch allows email addresses without a top-level domain, i.e. `x@y` is a valid email
+- Using patternMismatch to accept only emails with top-level domain
 - Setting `novalidate` with JavaScript instead of HTML allows for native form validation fallback when JavaScript fails
 
 ### Useful resources
